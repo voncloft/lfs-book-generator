@@ -1,4 +1,5 @@
 source ~/.bash_profile
+bsdtar -xvf /mnt/lfs/sources/glibc-2.39.tar.xz
 cd /mnt/lfs/sources/glibc*
 ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64
 ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64/ld-lsb-x86-64.so.3

@@ -1,3 +1,4 @@
+bsdtar -xvf /mnt/lfs/sources/coreutils-9.5.tar.xz
 cd /mnt/lfs/sources/coreutils*
 patch -Np1 -i ../coreutils-9.5-i18n-1.patch
 autoreconf -fiv

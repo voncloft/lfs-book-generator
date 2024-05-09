@@ -1,4 +1,5 @@
 source ~/.bash_profile
+bsdtar -xvf /mnt/lfs/sources/bash-5.2.21.tar.gz
 cd /mnt/lfs/sources/bash*
 ./configure --prefix=/usr                      \
             --build=$(sh support/config.guess) \

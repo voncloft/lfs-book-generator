@@ -1,3 +1,4 @@
+bsdtar -xvf /mnt/lfs/sources/kbd-2.6.4.tar.xz
 cd /mnt/lfs/sources/kbd*
 patch -Np1 -i ../kbd-2.6.4-backspace-1.patch
 sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure

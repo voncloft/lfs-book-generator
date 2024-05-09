@@ -1,3 +1,4 @@
+bsdtar -xvf /mnt/lfs/sources/bash-5.2.21.tar.gz
 cd /mnt/lfs/sources/bash*
 patch -Np1 -i ../bash-5.2.21-upstream_fixes-1.patch
 ./configure --prefix=/usr             \

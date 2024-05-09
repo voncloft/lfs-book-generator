@@ -1,3 +1,4 @@
+bsdtar -xvf /mnt/lfs/sources/readline-8.2.tar.gz
 cd /mnt/lfs/sources/readline*
 sed -i '/MV.*old/d' Makefile.in
 sed -i '/{OLDSUFF}/c:' support/shlib-install
