@@ -1,0 +1,2 @@
+export LFS=
+echo $LFS
