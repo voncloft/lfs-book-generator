@@ -7,8 +7,9 @@ extract_kbd_command() {
 
     # Use xmllint to extract content within <kbd class="command"> tags
     #local kbd_content=$(wget -qO- "$page_url" | xmllint --html --xpath '//pre[@class="userinput"]/kbd[@class="command"]/text()' - 2>/dev/null)
-     local kbd_content=$(wget -qO- "$page_url" | xmllint --html --xpath '//kbd[@class="command"]/text() | //code[@class="literal"]/text() | //code[@class="replaceable"]/text()' - 2>/dev/null)
-
+    #local kbd_content=$(wget -qO- "$page_url" | xmllint --html --xpath '//kbd[@class="command"]/text() | //code[@class="literal"]/text() | //code[@class="replaceable"]/text()' - 2>/dev/null)
+    local kbd_content=$(wget -qO- "$page_url" | xmllint --html --xpath '//kbd[@class="command"]/text() | //code[@class="literal"]/text() | //em[@class="replaceable"]/code/text()' - 2>/dev/null)
+    #local kbd_content=$(wget -qO- "$page_url" | xmllint --html --xpath '//kbd[@class="command"]/text() | //code[@class="literal"]/text() | //em[@class="replaceable"]/code/text()' - 2>/dev/null | sed ':a;N;$!ba;s/\n//g')
    local kbd_content_text=$(echo "$kbd_content" | sed -e 's/&gt;/>/g' -e 's/&lt;/</g' -e 's/&amp;&amp;//g' -e 's/&amp;/\&/g')
     # Save extracted content to the output file
     #echo "$kbd_content" > "$output_file"
