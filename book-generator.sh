@@ -55,6 +55,27 @@ get_pkg_name()
     local result="${input%%-*}"
     echo "$result"
 }
+
+
+tar_command() {
+    local package_name="$1"
+    local directory="/mnt/lfs/sources"
+
+    # Search for the package file
+    local package_file=$(find "$directory" -maxdepth 1 -type f -name "${package_name}*")
+    
+    # Check if package file exists
+    if [ -z "$package_file" ]; then
+        echo "Error: Package $package_name not found in $directory."
+    else
+    	echo "bsdtar -xvf $package_file" >> $2
+    fi
+
+    echo "$package_file"
+}
+
+
+
 #base_url="https://www.linuxfromscratch.org/lfs/view/stable"
 base_url="https://www.linuxfromscratch.org/~thomas/multilib"
 content=$(curl -s "$base_url/index.html")
@@ -79,6 +100,7 @@ for url in $urls; do
     fi
     package_name=$(get_pkg_name $last_part)
     echo $package_name
+    tar_command $package_name "stripped/$chapter/$var_name.sh"
     extract_kbd_command "$base_url/$url" "stripped/$chapter/$var_name.sh"
     ((counter++))
 done
