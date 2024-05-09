@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Function to extract content from grey boxes
+get_toolchain_cmd()
+{
+	echo "source ~/.bash_profile" >> $1
+}
 extract_kbd_command() {
     local page_url="$1"
     local output_file="$2"
@@ -13,7 +17,7 @@ extract_kbd_command() {
    local kbd_content_text=$(echo "$kbd_content" | sed -e 's/&gt;/>/g' -e 's/&lt;/</g' -e 's/&amp;&amp;//g' -e 's/&amp;/\&/g')
     # Save extracted content to the output file
     #echo "$kbd_content" > "$output_file"
-    echo "$kbd_content_text" > "$output_file"
+    echo "$kbd_content_text" >> "$output_file"
 }
 
 extract_urls() {
@@ -45,11 +49,18 @@ create_chapter_directory() {
         echo "Created directory '$chapter' in '$download_folder'"
     fi
 }
+get_pkg_name()
+{
+    local input="$1"
+    local result="${input%%-*}"
+    echo "$result"
+}
 #base_url="https://www.linuxfromscratch.org/lfs/view/stable"
 base_url="https://www.linuxfromscratch.org/~thomas/multilib"
 content=$(curl -s "$base_url/index.html")
 urls=$(extract_urls "$content")
 counter=1
+rm -rfv /lfs-book-generator/stripped
 
 for url in $urls; do
     echo "$base_url/$url"
@@ -63,6 +74,11 @@ for url in $urls; do
         var_name="$counter-$last_part"
     fi
     echo $var_name
+    if [[ "$chapter" == "chapter05" ]];then
+	get_toolchain_cmd "stripped/$chapter/$var_name.sh"
+    fi
+    package_name=$(get_pkg_name $last_part)
+    echo $package_name
     extract_kbd_command "$base_url/$url" "stripped/$chapter/$var_name.sh"
     ((counter++))
 done
