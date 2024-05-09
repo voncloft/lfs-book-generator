@@ -68,12 +68,23 @@ tar_command() {
     if [ -z "$package_file" ]; then
         echo "Error: Package $package_name not found in $directory."
     else
-    	echo "bsdtar -xvf $package_file" >> $2
+    	if [[ "$package_file" == *".patch"* ]]; then
+		echo "Error: Patch file not adding"
+	else
+		echo "bsdtar -xvf $package_file" >> $2
+	fi
     fi
 
     echo "$package_file"
 }
+insert_cd()
+{
+	echo "cd /mnt/lfs/sources/$1" >> $2
+}
 
+delete_folders() {
+	echo 'find /mnt/lfs/sources -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +' > deletion_script.sh >> $1
+}
 
 
 #base_url="https://www.linuxfromscratch.org/lfs/view/stable"
@@ -95,13 +106,16 @@ for url in $urls; do
         var_name="$counter-$last_part"
     fi
     echo $var_name
-    if [[ "$chapter" == "chapter05" ]];then
+    if [[ "$chapter" == "chapter05" || "$chapter" == "chapter06" ]];then
 	get_toolchain_cmd "stripped/$chapter/$var_name.sh"
     fi
     package_name=$(get_pkg_name $last_part)
     echo $package_name
     tar_command $package_name "stripped/$chapter/$var_name.sh"
+    insert_cd "${package_name}*" "stripped/$chapter/$var_name.sh"
     extract_kbd_command "$base_url/$url" "stripped/$chapter/$var_name.sh"
+    delete_folders "stripped/$chapter/$var_name.sh"
+
     ((counter++))
 done
 

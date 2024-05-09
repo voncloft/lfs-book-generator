@@ -1,0 +1,36 @@
+bsdtar -xvf /mnt/lfs/sources/tcl8.6.14-html.tar.gz
+/mnt/lfs/sources/tcl8.6.14-src.tar.gz
+cd /mnt/lfs/sources/tcl*
+SRCDIR=$(pwd)
+cd unix
+./configure --prefix=/usr           \
+            --mandir=/usr/share/man
+make
+
+sed -e "s|$SRCDIR/unix|/usr/lib|" \
+    -e "s|$SRCDIR|/usr/include|"  \
+    -i tclConfig.sh
+
+sed -e "s|$SRCDIR/unix/pkgs/tdbc1.1.7|/usr/lib/tdbc1.1.7|" \
+    -e "s|$SRCDIR/pkgs/tdbc1.1.7/generic|/usr/include|"    \
+    -e "s|$SRCDIR/pkgs/tdbc1.1.7/library|/usr/lib/tcl8.6|" \
+    -e "s|$SRCDIR/pkgs/tdbc1.1.7|/usr/include|"            \
+    -i pkgs/tdbc1.1.7/tdbcConfig.sh
+
+sed -e "s|$SRCDIR/unix/pkgs/itcl4.2.4|/usr/lib/itcl4.2.4|" \
+    -e "s|$SRCDIR/pkgs/itcl4.2.4/generic|/usr/include|"    \
+    -e "s|$SRCDIR/pkgs/itcl4.2.4|/usr/include|"            \
+    -i pkgs/itcl4.2.4/itclConfig.sh
+
+unset SRCDIR
+make test
+make install
+chmod -v u+w /usr/lib/libtcl8.6.so
+make install-private-headers
+ln -sfv tclsh8.6 /usr/bin/tclsh
+mv /usr/share/man/man3/{Thread,Tcl_Thread}.3
+cd ..
+tar -xf ../tcl8.6.14-html.tar.gz --strip-components=1
+mkdir -v -p /usr/share/doc/tcl-8.6.14
+cp -v -r  ./html/* /usr/share/doc/tcl-8.6.14
+find /mnt/lfs/sources -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
