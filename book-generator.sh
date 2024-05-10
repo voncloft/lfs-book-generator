@@ -86,7 +86,7 @@ insert_cd()
 }
 
 delete_folders() {
-	echo 'find /mnt/lfs/sources -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +' > deletion_script.sh >> $1
+	echo 'find /mnt/lfs/sources -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +' >> $1
 }
 
 insert_book_page(){
