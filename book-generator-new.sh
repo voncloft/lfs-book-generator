@@ -110,6 +110,7 @@ initialize_check(){
 	echo "Update your system as needed before you continue running again will start the install"
 }
 get_sources(){
+	rm wget-list-sysv
 	wget https://www.linuxfromscratch.org/~thomas/multilib/wget-list-sysv
 	wget --input-file=wget-list-sysv --continue --directory-prefix=/mnt/lfs/sources
 }
