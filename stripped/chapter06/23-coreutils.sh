@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/coreutils.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/coreutils-9.5.tar.xz
 cd /mnt/lfs/sources/coreutils*

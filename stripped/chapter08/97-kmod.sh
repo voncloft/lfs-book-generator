@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/kmod.html
 bsdtar -xvf /mnt/lfs/sources/kmod-32.tar.xz
 cd /mnt/lfs/sources/kmod*
 ./configure --prefix=/usr          \

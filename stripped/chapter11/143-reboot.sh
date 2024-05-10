@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/reboot*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter11/reboot.html
 logout
 umount -v $LFS/dev/pts
 mountpoint -q $LFS/dev/shm  umount -v $LFS/dev/shm

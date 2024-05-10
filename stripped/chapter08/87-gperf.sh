@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/gperf.html
 bsdtar -xvf /mnt/lfs/sources/gperf-3.1.tar.gz
 cd /mnt/lfs/sources/gperf*
 ./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.1

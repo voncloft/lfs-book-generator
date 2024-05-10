@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/pkgconf.html
 bsdtar -xvf /mnt/lfs/sources/pkgconf-2.2.0.tar.xz
 cd /mnt/lfs/sources/pkgconf*
 ./configure --prefix=/usr              \

@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/creatingminlayout*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter04/creatingminlayout.html
 mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}
 
 for i in bin lib sbin; do

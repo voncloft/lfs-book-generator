@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/make.html
 bsdtar -xvf /mnt/lfs/sources/make-4.4.1.tar.gz
 cd /mnt/lfs/sources/make*
 ./configure --prefix=/usr

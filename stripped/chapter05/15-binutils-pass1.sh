@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter05/binutils-pass1.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/binutils-2.42.tar.xz
 cd /mnt/lfs/sources/binutils*

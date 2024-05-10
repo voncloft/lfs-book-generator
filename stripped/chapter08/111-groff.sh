@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/groff.html
 bsdtar -xvf /mnt/lfs/sources/groff-1.23.0.tar.gz
 cd /mnt/lfs/sources/groff*
 PAGE=

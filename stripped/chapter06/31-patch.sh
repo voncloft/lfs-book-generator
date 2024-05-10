@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/patch.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/patch-2.7.6.tar.xz
 cd /mnt/lfs/sources/patch*

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/meson.html
 bsdtar -xvf /mnt/lfs/sources/meson-1.4.0.tar.gz
 cd /mnt/lfs/sources/meson*
 pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD

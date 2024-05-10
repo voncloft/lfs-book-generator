@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter10/grub.html
 bsdtar -xvf /mnt/lfs/sources/grub-2.12.tar.xz
 cd /mnt/lfs/sources/grub*
 cd /tmp
@@ -14,8 +15,8 @@ insmod part_gpt
 insmod ext2
 set root=(hd0,2)
 
-menuentry "GNU/Linux, Linux 6.8.8-lfs-r12.0-947" {
-        linux   /boot/vmlinuz-6.8.8-lfs-r12.0-947 root=/dev/sda2 ro
+menuentry "GNU/Linux, Linux 6.8.8-lfs-r12.0-948" {
+        linux   /boot/vmlinuz-6.8.8-lfs-r12.0-948 root=/dev/sda2 ro
 }
 
 EOF

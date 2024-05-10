@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/zlib.html
 bsdtar -xvf /mnt/lfs/sources/zlib-1.3.1.tar.gz
 cd /mnt/lfs/sources/zlib*
 ./configure --prefix=/usr

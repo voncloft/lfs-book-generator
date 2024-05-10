@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter05/linux-headers.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/linux-6.8.8.tar.xz
 cd /mnt/lfs/sources/linux*

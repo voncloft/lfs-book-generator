@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/inputrc*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter09/inputrc.html
 cat > /etc/inputrc << "EOF"
 
 # Begin /etc/inputrc

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/perl.html
 bsdtar -xvf /mnt/lfs/sources/perl-5.38.2.tar.xz
 cd /mnt/lfs/sources/perl*
 export BUILD_ZLIB=False

@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/settingenvironment*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter04/settingenvironment.html
 cat > ~/.bash_profile << "EOF"
 
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
@@ -25,8 +25,7 @@ make -j32
 export MAKEFLAGS=-j32
 cat >> ~/.bashrc << "EOF"
 
-export MAKEFLAGS=-j
-$(nproc)
+export MAKEFLAGS=-j$(nproc)
 
 EOF
 $(nproc)

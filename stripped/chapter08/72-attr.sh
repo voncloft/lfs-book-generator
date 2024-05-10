@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/attr.html
 bsdtar -xvf /mnt/lfs/sources/attr-2.5.2.tar.gz
 cd /mnt/lfs/sources/attr*
 ./configure --prefix=/usr     \

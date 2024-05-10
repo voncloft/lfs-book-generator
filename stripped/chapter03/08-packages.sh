@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/packages*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter03/packages.html
 590765dee95907dbc3c856f7255bd669
 227043ec2f6ca03c0948df5517f9c927
 1be79f7106ab6767f18391c5e22be701

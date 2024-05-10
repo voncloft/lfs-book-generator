@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/hostreqs*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter02/hostreqs.html
 <package-name>
 -devel
 <package-name>

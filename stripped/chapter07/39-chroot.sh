@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/chroot*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter07/chroot.html
 chroot "$LFS" /usr/bin/env -i   \
     HOME=/root                  \
     TERM="$TERM"                \

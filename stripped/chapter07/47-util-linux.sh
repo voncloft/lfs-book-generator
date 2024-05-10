@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter07/util-linux.html
 bsdtar -xvf /mnt/lfs/sources/util-linux-2.40.tar.xz
 cd /mnt/lfs/sources/util*
 mkdir -pv /var/lib/hwclock

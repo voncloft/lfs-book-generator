@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/e2fsprogs.html
 bsdtar -xvf /mnt/lfs/sources/e2fsprogs-1.47.0.tar.gz
 cd /mnt/lfs/sources/e2fsprogs*
 mkdir -v build

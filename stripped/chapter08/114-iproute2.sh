@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/iproute2.html
 bsdtar -xvf /mnt/lfs/sources/iproute2-6.8.0.tar.xz
 cd /mnt/lfs/sources/iproute2*
 sed -i /ARPD/d Makefile

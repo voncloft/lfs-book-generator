@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/m4.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/m4-1.4.19.tar.xz
 cd /mnt/lfs/sources/m4*

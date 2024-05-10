@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/binutils.html
 bsdtar -xvf /mnt/lfs/sources/binutils-2.42.tar.xz
 cd /mnt/lfs/sources/binutils*
 mkdir -v build

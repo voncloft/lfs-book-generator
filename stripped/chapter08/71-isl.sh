@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/isl.html
 bsdtar -xvf /mnt/lfs/sources/isl-0.26.tar.xz
 cd /mnt/lfs/sources/isl*
 ./configure --prefix=/usr    \

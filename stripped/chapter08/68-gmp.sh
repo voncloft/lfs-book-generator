@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/gmp.html
 bsdtar -xvf /mnt/lfs/sources/gmp-6.3.0.tar.xz
 cd /mnt/lfs/sources/gmp*
  ./configure ...

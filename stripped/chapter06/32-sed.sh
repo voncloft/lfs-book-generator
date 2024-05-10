@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/sed.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/sed-4.9.tar.xz
 cd /mnt/lfs/sources/sed*

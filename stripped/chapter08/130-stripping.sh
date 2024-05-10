@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/stripping*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/stripping.html
 g
 save_usrlib="$(cd /usr/lib; ls ld-linux*[^g])
              libc.so.6

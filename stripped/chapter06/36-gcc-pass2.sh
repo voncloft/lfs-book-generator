@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/gcc-pass2.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/gcc-13.2.0.tar.xz
 cd /mnt/lfs/sources/gcc*

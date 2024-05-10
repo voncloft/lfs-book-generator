@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/vim.html
 bsdtar -xvf /mnt/lfs/sources/vim-9.1.0330.tar.gz
 cd /mnt/lfs/sources/vim*
 echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h

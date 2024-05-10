@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/sed.html
 bsdtar -xvf /mnt/lfs/sources/sed-4.9.tar.xz
 cd /mnt/lfs/sources/sed*
 ./configure --prefix=/usr

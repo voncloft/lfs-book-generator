@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/creatingdirs*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter07/creatingdirs.html
 mkdir -pv /{boot,home,mnt,opt,srv}
 mkdir -pv /etc/{opt,sysconfig}
 mkdir -pv /lib/firmware

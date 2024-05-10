@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/toolchaintechnotes*
+#https://www.linuxfromscratch.org/~thomas/multilib/partintro/toolchaintechnotes.html
 x86_64-unknown-freebsd
 aarch64-unknown-linux-android
 aarch64-unknown-linux-gnu

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter05/gcc-pass1.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/gcc-13.2.0.tar.xz
 cd /mnt/lfs/sources/gcc*
@@ -38,8 +39,6 @@ mlist=m64,m32,mx32
     --enable-languages=c,c++
 make
 make install
-$()
-$()
 cd ..
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include/limits.h

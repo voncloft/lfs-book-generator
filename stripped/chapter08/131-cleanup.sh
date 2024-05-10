@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/cleanup*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/cleanup.html
 rm -rf /tmp/*
 find /usr/lib /usr/libexec -name \*.la -delete
 

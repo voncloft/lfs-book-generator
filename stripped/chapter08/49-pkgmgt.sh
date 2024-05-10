@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/pkgmgt*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/pkgmgt.html
 libfoo
 grep -l '
 libfoo

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/expect.html
 bsdtar -xvf /mnt/lfs/sources/expect5.45.4.tar.gz
 cd /mnt/lfs/sources/expect*
 python3 -c 'from pty import spawn; spawn(["echo", "ok"])'

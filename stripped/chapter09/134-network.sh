@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/network*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter09/network.html
 cd /etc/sysconfig/
 cat > ifconfig.
 eth0

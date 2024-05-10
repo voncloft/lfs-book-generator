@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter05/glibc.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/glibc-2.39.tar.xz
 cd /mnt/lfs/sources/glibc*

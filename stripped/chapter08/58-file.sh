@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/file.html
 bsdtar -xvf /mnt/lfs/sources/file-5.45.tar.gz
 cd /mnt/lfs/sources/file*
 ./configure --prefix=/usr

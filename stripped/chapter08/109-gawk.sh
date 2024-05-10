@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/gawk.html
 bsdtar -xvf /mnt/lfs/sources/gawk-5.3.0.tar.xz
 cd /mnt/lfs/sources/gawk*
 sed -i 's/extras//' Makefile.in

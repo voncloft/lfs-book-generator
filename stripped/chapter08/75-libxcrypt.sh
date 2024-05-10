@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/libxcrypt.html
 bsdtar -xvf /mnt/lfs/sources/libxcrypt-4.4.36.tar.xz
 cd /mnt/lfs/sources/libxcrypt*
 ./configure --prefix=/usr                \

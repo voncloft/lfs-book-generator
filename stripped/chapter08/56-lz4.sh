@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/lz4.html
 bsdtar -xvf /mnt/lfs/sources/lz4-1.9.4.tar.gz
 cd /mnt/lfs/sources/lz4*
 make BUILD_STATIC=no

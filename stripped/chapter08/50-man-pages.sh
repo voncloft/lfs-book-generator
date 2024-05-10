@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/man-pages.html
 bsdtar -xvf /mnt/lfs/sources/man-pages-6.7.tar.xz
 /mnt/lfs/sources/man-db-2.12.1.tar.xz
 cd /mnt/lfs/sources/man*

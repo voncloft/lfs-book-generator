@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/tar.html
 bsdtar -xvf /mnt/lfs/sources/tar-1.35.tar.xz
 cd /mnt/lfs/sources/tar*
 FORCE_UNSAFE_CONFIGURE=1  \

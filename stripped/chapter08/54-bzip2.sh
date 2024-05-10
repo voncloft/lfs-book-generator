@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/bzip2.html
 bsdtar -xvf /mnt/lfs/sources/bzip2-1.0.8.tar.gz
 cd /mnt/lfs/sources/bzip2*
 patch -Np1 -i ../bzip2-1.0.8-install_docs-1.patch

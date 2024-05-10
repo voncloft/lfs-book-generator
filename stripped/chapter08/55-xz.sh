@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/xz.html
 bsdtar -xvf /mnt/lfs/sources/xz-5.4.6.tar.xz
 cd /mnt/lfs/sources/xz*
 ./configure --prefix=/usr    \

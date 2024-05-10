@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/locale*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter09/locale.html
 <ll>
 en
 <CC>

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/libffi.html
 bsdtar -xvf /mnt/lfs/sources/libffi-3.4.6.tar.gz
 cd /mnt/lfs/sources/libffi*
 ./configure --prefix=/usr          \

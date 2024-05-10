@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/gzip.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/gzip-1.13.tar.xz
 cd /mnt/lfs/sources/gzip*

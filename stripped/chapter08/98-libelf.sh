@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/libelf*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/libelf.html
 ./configure --prefix=/usr                \
             --disable-debuginfod         \
             --enable-libdebuginfod=dummy

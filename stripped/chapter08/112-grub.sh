@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/grub.html
 bsdtar -xvf /mnt/lfs/sources/grub-2.12.tar.xz
 cd /mnt/lfs/sources/grub*
 unset {C,CPP,CXX,LD}FLAGS

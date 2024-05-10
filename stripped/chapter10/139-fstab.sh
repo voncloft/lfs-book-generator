@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/fstab*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter10/fstab.html
 cat > /etc/fstab << "EOF"
 
 # Begin /etc/fstab

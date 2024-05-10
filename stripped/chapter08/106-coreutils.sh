@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/coreutils.html
 bsdtar -xvf /mnt/lfs/sources/coreutils-9.5.tar.xz
 cd /mnt/lfs/sources/coreutils*
 patch -Np1 -i ../coreutils-9.5-i18n-1.patch
@@ -9,7 +10,8 @@ make
 make NON_ROOT_USERNAME=tester check-root
 groupadd -g 102 dummy -U tester
 chown -R tester . 
-su tester -c "PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check" < /dev/null
+su tester -c "PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check" \
+   < /dev/null
 groupdel dummy
 make install
 mv -v /usr/bin/chroot /usr/sbin

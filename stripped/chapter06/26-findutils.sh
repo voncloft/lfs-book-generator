@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/findutils.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/findutils-4.9.0.tar.xz
 cd /mnt/lfs/sources/findutils*

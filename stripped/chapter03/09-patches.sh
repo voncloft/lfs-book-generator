@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/patches*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter03/patches.html
 2d1691a629c558e894dbb78ee6bf34ef
 6a5ac7e89b791aae556de0f745916f7f
 ce7529b74564aac887c3f48582a5e6cf

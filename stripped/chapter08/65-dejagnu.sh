@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/dejagnu.html
 bsdtar -xvf /mnt/lfs/sources/dejagnu-1.6.3.tar.gz
 cd /mnt/lfs/sources/dejagnu*
 mkdir -v build

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/tcl.html
 bsdtar -xvf /mnt/lfs/sources/tcl8.6.14-html.tar.gz
 /mnt/lfs/sources/tcl8.6.14-src.tar.gz
 cd /mnt/lfs/sources/tcl*

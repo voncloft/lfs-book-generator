@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/flex.html
 bsdtar -xvf /mnt/lfs/sources/flex-2.6.4.tar.gz
 cd /mnt/lfs/sources/flex*
 ./configure --prefix=/usr \

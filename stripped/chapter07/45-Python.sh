@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter07/Python.html
 bsdtar -xvf /mnt/lfs/sources/Python-3.12.3.tar.xz
 cd /mnt/lfs/sources/Python*
 ./configure --prefix=/usr   \

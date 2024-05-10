@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/gettext.html
 bsdtar -xvf /mnt/lfs/sources/gettext-0.22.5.tar.xz
 cd /mnt/lfs/sources/gettext*
 ./configure --prefix=/usr    \

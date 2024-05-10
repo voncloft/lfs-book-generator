@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/addinguser*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter04/addinguser.html
 groupadd lfs
 useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 passwd lfs

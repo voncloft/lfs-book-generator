@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/mounting*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter02/mounting.html
 mkdir -pv $LFS
 mount -v -t ext4 /dev/
 <xxx>

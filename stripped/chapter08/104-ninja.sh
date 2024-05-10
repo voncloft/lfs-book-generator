@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/ninja.html
 bsdtar -xvf /mnt/lfs/sources/ninja-1.12.0.tar.gz
 cd /mnt/lfs/sources/ninja*
 sed -i '/int Guess/a \

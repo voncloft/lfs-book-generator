@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/usage*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter09/usage.html
 cat > /etc/inittab << "EOF"
 
 # Begin /etc/inittab

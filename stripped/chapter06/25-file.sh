@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/file.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/file-5.45.tar.gz
 cd /mnt/lfs/sources/file*

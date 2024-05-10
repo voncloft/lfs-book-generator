@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/sysklogd.html
 bsdtar -xvf /mnt/lfs/sources/sysklogd-1.5.1.tar.gz
 cd /mnt/lfs/sources/sysklogd*
 sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c

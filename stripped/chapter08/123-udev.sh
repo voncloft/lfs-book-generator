@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/udev.html
 bsdtar -xvf /mnt/lfs/sources/udev-lfs-20230818.tar.xz
 cd /mnt/lfs/sources/udev*
 sed -i -e 's/GROUP="render"/GROUP="video"/' \

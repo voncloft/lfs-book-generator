@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/gawk.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/gawk-5.3.0.tar.xz
 cd /mnt/lfs/sources/gawk*

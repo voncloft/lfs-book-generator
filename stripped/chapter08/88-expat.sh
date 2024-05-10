@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/expat.html
 bsdtar -xvf /mnt/lfs/sources/expat-2.6.2.tar.xz
 cd /mnt/lfs/sources/expat*
 ./configure --prefix=/usr    \

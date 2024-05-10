@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/check.html
 bsdtar -xvf /mnt/lfs/sources/check-0.15.2.tar.gz
 cd /mnt/lfs/sources/check*
 ./configure --prefix=/usr --disable-static

@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/createfiles*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter07/createfiles.html
 ln -sv /proc/self/mounts /etc/mtab
 cat > /etc/hosts << EOF
 

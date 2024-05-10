@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/gcc.html
 bsdtar -xvf /mnt/lfs/sources/gcc-13.2.0.tar.xz
 cd /mnt/lfs/sources/gcc*
 sed -e '/m64=/s/lib64/lib/' \

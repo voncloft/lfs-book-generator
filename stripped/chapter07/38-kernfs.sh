@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/kernfs*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter07/kernfs.html
 mkdir -pv $LFS/{dev,proc,sys,run}
 mount -v --bind /dev $LFS/dev
 mount -vt devpts devpts -o gid=5,mode=0620 $LFS/dev/pts

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/mpc.html
 bsdtar -xvf /mnt/lfs/sources/mpc-1.3.1.tar.gz
 cd /mnt/lfs/sources/mpc*
 ./configure --prefix=/usr    \

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/zstd.html
 bsdtar -xvf /mnt/lfs/sources/zstd-1.5.6.tar.gz
 cd /mnt/lfs/sources/zstd*
 make prefix=/usr

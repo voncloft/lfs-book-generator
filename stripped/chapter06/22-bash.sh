@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/bash.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/bash-5.2.21.tar.gz
 cd /mnt/lfs/sources/bash*

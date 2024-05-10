@@ -1,11 +1,11 @@
-cd /mnt/lfs/sources/kernel*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter10/kernel.html
 make mrproper
 make menuconfig
 <host_LANG_value>
 make
 make modules_install
 mount /boot
-cp -iv arch/x86/boot/bzImage /boot/vmlinuz-6.8.8-lfs-r12.0-947
+cp -iv arch/x86/boot/bzImage /boot/vmlinuz-6.8.8-lfs-r12.0-948
 cp -iv System.map /boot/System.map-6.8.8
 cp -iv .config /boot/config-6.8.8
 cp -r Documentation -T /usr/share/doc/linux-6.8.8

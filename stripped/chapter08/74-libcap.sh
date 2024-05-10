@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/libcap.html
 bsdtar -xvf /mnt/lfs/sources/libcap-2.69.tar.xz
 cd /mnt/lfs/sources/libcap*
 sed -i '/install -m.*STA/d' libcap/Makefile

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/bc.html
 bsdtar -xvf /mnt/lfs/sources/bc-6.7.5.tar.xz
 cd /mnt/lfs/sources/bc*
 CC=gcc ./configure --prefix=/usr -G -O3 -r

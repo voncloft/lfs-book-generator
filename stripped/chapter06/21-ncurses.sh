@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/ncurses.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/ncurses-6.5.tar.gz
 cd /mnt/lfs/sources/ncurses*

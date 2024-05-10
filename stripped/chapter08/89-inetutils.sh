@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/inetutils.html
 bsdtar -xvf /mnt/lfs/sources/inetutils-2.5.tar.xz
 cd /mnt/lfs/sources/inetutils*
 ./configure --prefix=/usr        \

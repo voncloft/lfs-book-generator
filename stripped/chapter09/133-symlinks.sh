@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/symlinks*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter09/symlinks.html
 bash /usr/lib/udev/init-net-rules.sh
 cat /etc/udev/rules.d/70-persistent-net.rules
 SUBSYSTEM=="net"

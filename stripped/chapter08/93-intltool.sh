@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/intltool.html
 bsdtar -xvf /mnt/lfs/sources/intltool-0.51.0.tar.gz
 cd /mnt/lfs/sources/intltool*
 sed -i 's:\\\${:\\\$\\{:' intltool-update.in

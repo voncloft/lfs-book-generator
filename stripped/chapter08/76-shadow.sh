@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/shadow.html
 bsdtar -xvf /mnt/lfs/sources/shadow-4.15.1.tar.xz
 cd /mnt/lfs/sources/shadow*
 sed -i 's/groups$(EXEEXT) //' src/Makefile.in

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/mpfr.html
 bsdtar -xvf /mnt/lfs/sources/mpfr-4.2.1.tar.xz
 cd /mnt/lfs/sources/mpfr*
 ./configure --prefix=/usr        \

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/gdbm.html
 bsdtar -xvf /mnt/lfs/sources/gdbm-1.23.tar.gz
 cd /mnt/lfs/sources/gdbm*
 ./configure --prefix=/usr    \

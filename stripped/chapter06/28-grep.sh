@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/grep.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/grep-3.11.tar.xz
 cd /mnt/lfs/sources/grep*

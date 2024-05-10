@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter06/make.html
 source ~/.bash_profile
 bsdtar -xvf /mnt/lfs/sources/make-4.4.1.tar.gz
 cd /mnt/lfs/sources/make*

@@ -74,7 +74,8 @@ tar_command() {
     if [ -z "$package_file" ]; then
         echo "Error: Package $package_name not found in $directory."
     else
-		echo "bsdtar -xvf $package_file" >> $2
+	echo "bsdtar -xvf $package_file" >> $2
+	insert_cd "${package_name}*" $2
     fi
 
     echo "$package_file"
@@ -86,6 +87,10 @@ insert_cd()
 
 delete_folders() {
 	echo 'find /mnt/lfs/sources -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +' > deletion_script.sh >> $1
+}
+
+insert_book_page(){
+	echo "#"$1 >> $2
 }
 
 base_url="https://www.linuxfromscratch.org/~thomas/multilib"
@@ -110,13 +115,14 @@ for url in $urls; do
 	check_if_kbd_is_empty "$base_url/$url"
 	if [ $? = 2 ]; then
 		create_chapter_directory "$chapter"
+		insert_book_page "$base_url/$url" "stripped/$chapter/$var_name.sh"
 	    	if [[ "$chapter" == "chapter05" || "$chapter" == "chapter06" ]];then
 			get_toolchain_cmd "stripped/$chapter/$var_name.sh"
     		fi
     		package_name=$(get_pkg_name $last_part)
     		echo $package_name
 		tar_command $package_name "stripped/$chapter/$var_name.sh"
-		insert_cd "${package_name}*" "stripped/$chapter/$var_name.sh"
+		#insert_cd "${package_name}*" "stripped/$chapter/$var_name.sh"
     		extract_kbd_command "$base_url/$url" "stripped/$chapter/$var_name.sh"
     		delete_folders "stripped/$chapter/$var_name.sh"
 		((counter++))

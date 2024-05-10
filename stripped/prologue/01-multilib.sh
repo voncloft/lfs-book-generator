@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/multilib*
+#https://www.linuxfromscratch.org/~thomas/multilib/prologue/multilib.html
 echo 'int main(){}' > dummy.c
 gcc -m32 dummy.c
 ./a.out

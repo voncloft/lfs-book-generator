@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/procps-ng.html
 bsdtar -xvf /mnt/lfs/sources/procps-ng-4.0.4.tar.xz
 cd /mnt/lfs/sources/procps*
 ./configure --prefix=/usr                           \

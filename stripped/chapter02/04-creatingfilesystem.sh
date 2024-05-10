@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/creatingfilesystem*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter02/creatingfilesystem.html
 mkfs -v -t ext4 /dev/
 <xxx>
 <xxx>

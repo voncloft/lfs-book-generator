@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/acl.html
 bsdtar -xvf /mnt/lfs/sources/acl-2.3.2.tar.xz
 cd /mnt/lfs/sources/acl*
 ./configure --prefix=/usr         \

@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/libtool.html
 bsdtar -xvf /mnt/lfs/sources/libtool-2.4.7.tar.xz
 cd /mnt/lfs/sources/libtool*
 ./configure --prefix=/usr

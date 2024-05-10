@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/findutils.html
 bsdtar -xvf /mnt/lfs/sources/findutils-4.9.0.tar.xz
 cd /mnt/lfs/sources/findutils*
 ./configure --prefix=/usr --localstatedir=/var/lib/locate

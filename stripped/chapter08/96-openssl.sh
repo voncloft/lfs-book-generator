@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/openssl.html
 bsdtar -xvf /mnt/lfs/sources/openssl-3.3.0.tar.gz
 cd /mnt/lfs/sources/openssl*
 ./config --prefix=/usr         \

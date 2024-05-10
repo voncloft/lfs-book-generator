@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/glibc.html
 bsdtar -xvf /mnt/lfs/sources/glibc-2.39.tar.xz
 cd /mnt/lfs/sources/glibc*
 patch -Np1 -i ../glibc-2.39-fhs-1.patch

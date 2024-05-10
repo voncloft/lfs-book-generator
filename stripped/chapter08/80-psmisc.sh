@@ -1,3 +1,4 @@
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/psmisc.html
 bsdtar -xvf /mnt/lfs/sources/psmisc-23.7.tar.xz
 cd /mnt/lfs/sources/psmisc*
 ./configure --prefix=/usr

@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/xml*
+#https://www.linuxfromscratch.org/~thomas/multilib/chapter08/xml-parser.html
 perl Makefile.PL
 make
 make test

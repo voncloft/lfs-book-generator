@@ -1,4 +1,4 @@
-cd /mnt/lfs/sources/typography*
+#https://www.linuxfromscratch.org/~thomas/multilib/prologue/typography.html
 ./configure --prefix=/usr
 CC="gcc -B/usr/bin/" ../binutils-2.18/configure \
   --prefix=/tools --disable-nls --disable-werror
