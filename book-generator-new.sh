@@ -97,7 +97,8 @@ delete_folders() {
 insert_book_page(){
 	echo "#"$1 >> $2
 }
-initialize_setup() {
+initial_setup() {
+	touch process.txt
 	mkdir -pv /mnt/lfs/tools
 	mkdir -pv /mnt/lfs/sources
 	get_sources
@@ -159,19 +160,110 @@ start_install()
 	####update progress.txt to each attempt to install a package if successful overwrite step on textfile
 	####format: ChapterX/num-name_of_package
 	####update to log.txt
-}
 
-$line=$(head -n 1 /lfs-book-generator/progress.txt)
-if [[ -z $line ]]; then 
-	initial_setup
-elif [[ $line == "A" ]]
-then
-	download_book
-else
-	start_install
-fi
+	stripped_dir="stripped_files"
+	process_file="process.txt"
+
+	# Read the content of the process.txt file
+	process_content=$(<"$process_file")
+
+	# Determine the starting chapter and filename
+	start_chapter=$(dirname "$process_content")
+	filename=$(basename "$process_content")
+
+	# If the process.txt specifies only the chapter without a specific filename
+	# or if process.txt doesn't specify a filename at all, default to starting from "chapter05"
+	if [ "$filename" == "$start_chapter" ] || [ -z "$filename" ]; then
+    		start_chapter="chapter05"
+    		filename="00-placeholder.sh"  # Initialize filename to a placeholder if process.txt specifies only the chapter
+	fi
+
+	# Extract the number part from the filename
+	last_number=$(echo "$filename" | cut -d'-' -f1)
+
+	# Iterate through each directory in the "stripped" folder
+	for chapter_dir in "$stripped_dir"/*; do
+    		# Check if the directory is a directory
+    		if [ -d "$chapter_dir" ]; then
+        	# Check if the directory starts with the specified starting chapter
+        		if [[ "$(basename "$chapter_dir")" == "$start_chapter"* ]]; then
+            		echo "Processing directory: $chapter_dir"
+
+            		# Flag to indicate if any command fails
+            		error_flag=false
+
+            		# Iterate through each file in the directory
+            		for file in "$chapter_dir"/*; do
+                	# Check if the file is a regular file
+                	if [ -f "$file" ]; then
+                    	# Execute your command on the file
+                    		sh "$file"
+                    		# Check if the command failed
+                    		if [ $? -ne 0 ]; then
+                        		echo "Failed to execute command on file: $file"
+                        		error_flag=true  # Set error flag to true if any command fails
+                        		break  # Exit the loop if any command fails
+                    		else
+                        	# Update process.txt with the last successful file
+                        		echo "$start_chapter/$filename" > "$process_file"
+                    		fi
+                	fi
+           	 done
+
+            	# Exit the script if any command fails
+            	if [ "$error_flag" = true ]; then
+                	exit 1
+            	fi
+        fi
+    fi
+done
+
+}
+no_option(){
+	$line=$(head -n 1 /lfs-book-generator/progress.txt)
+	if [[ -z $line ]]; then 
+		initial_setup
+	elif [[ $line == "A" ]]
+	then
+		download_book
+	else
+		start_install
+	fi
+}
 ####TEST ON A VIRTUAL BOX
 ####Next step is to run thru the stripped files chapters starting at Chapter 4 and update progress.txt
 ####After each install output the last step done, so if it crashes it knows to not redo already done
 ####stuff
+help_display()
+{
+	echo "1 - initial_setup() - gets the folders setup for /mnt/lfs and sources"
+	echo "2 - download_book() - strips the book"
+	echo "3 - start_install() - starts install on system"
+	echo "nothing - start as usual"
+	echo "-h - Show this prompt"
+}
+if [ "$1" == "-h" ]; then
+    help_display
+fi
 
+# Check the number of command-line arguments
+if [ "$#" -eq 0 ]; then
+    no_option
+    exit 0
+fi
+
+case "$1" in
+    1)
+        initial_setup
+        ;;
+    2)
+        download_book
+        ;;
+    3)
+        start_install
+        ;;
+    *)
+        echo "Invalid function number. Use -h for help"
+        exit 1
+        ;;
+esac
