@@ -151,7 +151,7 @@ for url in $urls; do
 	fi
 done
 echo "Instructions Complete - LOOK OVER THE FILES possible errors may occur" 
-echo "B" > progress.txt
+echo "Chapter05" > progress.txt
 }
 start_install()
 {
