@@ -9,6 +9,7 @@
 get_toolchain_cmd()
 {
 	echo "source ~/.bash_profile" >> $1
+	echo "source ~/.bashrc" >> $1
 }
 extract_kbd_command() {
     local page_url="$1"
@@ -98,9 +99,15 @@ insert_book_page(){
 	echo "#"$1 >> $2
 }
 initial_setup() {
+	echo "Note MBR=BIOS, GPT=EUFI"
+	echo "Be sure to create a boot partition, and your main hard drive"
+	cp files/bash_profile ~/.bash_profile
+	cp files/bashrc ~/.bashrc
+	sh files/add_lfs_user.sh
 	touch process.txt
 	mkdir -pv /mnt/lfs/tools
 	mkdir -pv /mnt/lfs/sources
+	get_preliminaries
 	get_sources
 	initialize_check
 	echo "A" > progress.txt
@@ -114,7 +121,10 @@ get_sources(){
 	wget https://www.linuxfromscratch.org/~thomas/multilib/wget-list-sysv
 	wget --input-file=wget-list-sysv --continue --directory-prefix=/mnt/lfs/sources
 }
-
+get_preliminaries()
+{
+	sudo apt install sudo wget g++ texinfo pkg-config gcc-multilib g++-multilib libarchive-dev
+}
 download_book()
 {
 base_url="https://www.linuxfromscratch.org/~thomas/multilib"
@@ -239,7 +249,7 @@ help_display()
 {
 	echo "1 - initial_setup() - gets the folders setup for /mnt/lfs and sources"
 	echo "2 - download_book() - strips the book"
-	echo "3 - start_install() - starts install on system"
+	echo "3 - start_install() - starts install on system login with su - lfs"
 	echo "nothing - start as usual"
 	echo "-h - Show this prompt"
 }
